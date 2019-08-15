@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: f7743f22b65d28642aaafc520cb635b5
+timeCreated: 1535143766
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Signatra DEMO
+  fontNames:
+  - Signatra DEMO
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7f4cc9459aa84f342a95785c04564d52, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

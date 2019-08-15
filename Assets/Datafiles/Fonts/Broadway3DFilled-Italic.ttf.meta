@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: cde3834562317b0488db38caffc63a11
+timeCreated: 1535143766
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Broadway 3D Filled
+  fontNames:
+  - Broadway 3D Filled
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a46a36b15dae4c643b488664a0866cf4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

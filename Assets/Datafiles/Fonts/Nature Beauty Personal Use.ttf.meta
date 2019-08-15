@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 0ed68f3513f19404b80f40db9b2fb931
+timeCreated: 1535143764
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Nature Beauty Personal Use
+  fontNames:
+  - Nature Beauty Personal Use
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: b2d070fb5cee0d844ad1aa6c746e9057
+timeCreated: 1535143765
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Broadway
+  fontNames:
+  - Broadway
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b1543d6dfc6045d4ea4673a41d13a029, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

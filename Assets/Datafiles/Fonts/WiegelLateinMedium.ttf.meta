@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 79d4b0e1b1d539645840917eda6187bd
+timeCreated: 1535143765
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Wiegel Latein Medium
+  fontNames:
+  - Wiegel Latein Medium
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

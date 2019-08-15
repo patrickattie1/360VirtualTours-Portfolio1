@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: c252d9a6c9b378446a208e7bc7a42f67
+timeCreated: 1535143765
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Princella
+  fontNames:
+  - Princella
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ad6cc551ba54f6546807af6eb0287ce0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: cd5b78e996c93c045acd08d1481a2a34
+timeCreated: 1535143766
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Smile of the Ocean
+  fontNames:
+  - Smile of the Ocean
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,33 @@
+body{
+	background: url(../images/SogebankPic2.jpg) no-repeat center center fixed; 
+	background-size: cover;
+}
+
+#title{
+	font-size:40px;
+	color:Maroon;
+	text-align:left;
+	font-family:sans-serif;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+
+#gameContainer{
+	left:50%; 
+	transform:translateX(-50%);
+}
+
+#email-outer{
+	font-size:18px;
+	color:Maroon;
+	text-align:left;
+	font-family:sans-serif;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+
+#email-inner{
+	color:Maroon; 
+	text-decoration:none
+	text-align:left;
+}
