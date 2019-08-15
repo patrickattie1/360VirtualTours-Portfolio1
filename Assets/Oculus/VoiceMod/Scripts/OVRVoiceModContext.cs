@@ -222,7 +222,7 @@ public class OVRVoiceModContext : MonoBehaviour
 		}
 
 		// Add a listener to the OVRMessenger for touch events
-		OVRMessenger.AddListener<OVRTouchpad.TouchEvent>("Touchpad", LocalTouchEventCallback);
+		////OVRMessenger.AddListener<OVRTouchpad.TouchEvent>("Touchpad", LocalTouchEventCallback);
 
 		// VoiceMod: Set the current state of the voice mod as set in the inspector
 		SendVoiceModUpdate();
@@ -423,24 +423,24 @@ public class OVRVoiceModContext : MonoBehaviour
 	// NOTE: We will not worry about gain on Android, since it will be
 	// more important to switch presets. We will keep gain available on
 	// Desktop
-	void LocalTouchEventCallback(OVRTouchpad.TouchEvent touchEvent)
-	{
-		switch(touchEvent)
-		{
-			case(OVRTouchpad.TouchEvent.SingleTap):
-				audioMute = !audioMute;
+	////void LocalTouchEventCallback(OVRTouchpad.TouchEvent touchEvent)
+	//{
+	//	switch(touchEvent)
+	//	{
+	//		case(OVRTouchpad.TouchEvent.SingleTap):
+	//			audioMute = !audioMute;
 
-				OVRDebugConsole.Clear();
-				OVRDebugConsole.ClearTimeout(1.5f);
+	//			OVRDebugConsole.Clear();
+	//			OVRDebugConsole.ClearTimeout(1.5f);
 
-				if(!audioMute)
-					OVRDebugConsole.Log("LOOPBACK MODE: ENABLED");
-				else
-					OVRDebugConsole.Log("LOOPBACK MODE: DISABLED");
+	//			if(!audioMute)
+	//				OVRDebugConsole.Log("LOOPBACK MODE: ENABLED");
+	//			else
+	//				OVRDebugConsole.Log("LOOPBACK MODE: DISABLED");
 
-				break;
-		}
-	}
+	//			break;
+	//	}
+	////}
 
 	// Update directly from current state in inspector
 	void UpdateVoiceModUpdate()

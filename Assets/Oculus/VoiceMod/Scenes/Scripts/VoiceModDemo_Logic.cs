@@ -6,7 +6,7 @@ public class VoiceModDemo_Logic : MonoBehaviour
 	public OVRVoiceModContext[] contexts;
 	public Material material;
 	public Transform[] xfrms;
-	public EnableSwitch SwitchTarget;
+	////public EnableSwitch SwitchTarget;
 
 	private int targetSet = 0;
 
@@ -20,11 +20,11 @@ public class VoiceModDemo_Logic : MonoBehaviour
 	void Start () 
 	{
 		// Add a listener to the OVRMessenger for touch events
-		OVRMessenger.AddListener<OVRTouchpad.TouchEvent>("Touchpad", LocalTouchEventCallback);
+		////OVRMessenger.AddListener<OVRTouchpad.TouchEvent>("Touchpad", LocalTouchEventCallback);
 
 		// Initialize the proper target set
 		targetSet = 0;
-		SwitchTarget.SetActive(0);
+		////SwitchTarget.SetActive(0);
 
 		// Set initial color on models
 		if(material != null)
@@ -118,14 +118,14 @@ public class VoiceModDemo_Logic : MonoBehaviour
 		switch(targetSet)
 		{
 		case(0):
-			SwitchTarget.SetActive(0);
+			////SwitchTarget.SetActive(0);
 			OVRDebugConsole.Clear();
 			OVRDebugConsole.Log("MICROPHONE INPUT");
 			OVRDebugConsole.ClearTimeout(1.5f);
 
 			break;
 		case(1):
-			SwitchTarget.SetActive(1);
+			////SwitchTarget.SetActive(1);
 			OVRDebugConsole.Clear();
 			OVRDebugConsole.Log("SAMPLE INPUT");
 			OVRDebugConsole.ClearTimeout(1.5f);
@@ -138,105 +138,105 @@ public class VoiceModDemo_Logic : MonoBehaviour
 	/// Local touch event callback.
 	/// </summary>
 	/// <param name="touchEvent">Touch event.</param>
-	void LocalTouchEventCallback(OVRTouchpad.TouchEvent touchEvent)
-	{
-		switch(touchEvent)
-		{
-			case(OVRTouchpad.TouchEvent.Left):
+	///void LocalTouchEventCallback(OVRTouchpad.TouchEvent touchEvent)
+	//{
+	//	switch(touchEvent)
+	//	{
+	//		case(OVRTouchpad.TouchEvent.Left):
 		
-			targetSet--;
-			if(targetSet < 0)
-				targetSet = 1;
+	//		targetSet--;
+	//		if(targetSet < 0)
+	//			targetSet = 1;
 
-			SetCurrentTarget();
+	//		SetCurrentTarget();
 
-			break;
+	//		break;
 			
-			case(OVRTouchpad.TouchEvent.Right):
+	//		case(OVRTouchpad.TouchEvent.Right):
 
-			targetSet++;
-			if(targetSet > 1)
-				targetSet = 0;
+	//		targetSet++;
+	//		if(targetSet > 1)
+	//			targetSet = 0;
 
-			SetCurrentTarget();
+	//		SetCurrentTarget();
 
-			break;
+	//		break;
 
-		case(OVRTouchpad.TouchEvent.Up):
+	//	case(OVRTouchpad.TouchEvent.Up):
 
-			if(contexts.Length != 0)
-			{
-				if(contexts[0].GetNumPresets() == 0)
-				{
-					OVRDebugConsole.Clear();
-					OVRDebugConsole.Log("NO PRESETS!");
-					OVRDebugConsole.ClearTimeout(1.5f);
-				}
-				else
-				{
-					currentPreset++;
-					if(currentPreset >= contexts[0].GetNumPresets())
-						currentPreset = 0;
+	//		if(contexts.Length != 0)
+	//		{
+	//			if(contexts[0].GetNumPresets() == 0)
+	//			{
+	//				OVRDebugConsole.Clear();
+	//				OVRDebugConsole.Log("NO PRESETS!");
+	//				OVRDebugConsole.ClearTimeout(1.5f);
+	//			}
+	//			else
+	//			{
+	//				currentPreset++;
+	//				if(currentPreset >= contexts[0].GetNumPresets())
+	//					currentPreset = 0;
 
-					Color c = Color.black;
+	//				Color c = Color.black;
 
-					for (int i = 0; i < contexts.Length; i++)
-					{
-						if(contexts[i].SetPreset(currentPreset) == true)
-						{
-							// query color from preset and set material color
-							// of sphere
-							c = contexts[i].GetPresetColor(currentPreset);
-						}
-					}
+	//				for (int i = 0; i < contexts.Length; i++)
+	//				{
+	//					if(contexts[i].SetPreset(currentPreset) == true)
+	//					{
+	//						// query color from preset and set material color
+	//						// of sphere
+	//						c = contexts[i].GetPresetColor(currentPreset);
+	//					}
+	//				}
 
-					// Set the material(s) note: each context is sharing a single 
-					// material in this demo :)
-					if(material != null)
-						material.SetColor("_Color", c);
-				}
-			}
+	//				// Set the material(s) note: each context is sharing a single 
+	//				// material in this demo :)
+	//				if(material != null)
+	//					material.SetColor("_Color", c);
+	//			}
+	//		}
 				
-			break;
+	//		break;
 
-		case(OVRTouchpad.TouchEvent.Down):
-			if(contexts.Length != 0)
-			{
-				if(contexts[0].GetNumPresets() == 0)
-				{
-					OVRDebugConsole.Clear();
-					OVRDebugConsole.Log("NO PRESETS!");
-					OVRDebugConsole.ClearTimeout(1.5f);
-				}
-				else
-				{
-					currentPreset--;
-					if(currentPreset < 0)
-						currentPreset = contexts[0].GetNumPresets() - 1;
+	//	case(OVRTouchpad.TouchEvent.Down):
+	//		if(contexts.Length != 0)
+	//		{
+	//			if(contexts[0].GetNumPresets() == 0)
+	//			{
+	//				OVRDebugConsole.Clear();
+	//				OVRDebugConsole.Log("NO PRESETS!");
+	//				OVRDebugConsole.ClearTimeout(1.5f);
+	//			}
+	//			else
+	//			{
+	//				currentPreset--;
+	//				if(currentPreset < 0)
+	//					currentPreset = contexts[0].GetNumPresets() - 1;
 
-					Color c = Color.black;
+	//				Color c = Color.black;
 
-					for (int i = 0; i < contexts.Length; i++)
-					{
-						if(contexts[i].SetPreset(currentPreset) == true)
-						{
-							// query color from preset and set material color
-							// of sphere
-							c = contexts[i].GetPresetColor(currentPreset);
-						}
-					}
+	//				for (int i = 0; i < contexts.Length; i++)
+	//				{
+	//					if(contexts[i].SetPreset(currentPreset) == true)
+	//					{
+	//						// query color from preset and set material color
+	//						// of sphere
+	//						c = contexts[i].GetPresetColor(currentPreset);
+	//					}
+	//				}
 
-					// Set the material(s) note: each context is sharing a single 
-					// material in this demo :)
-					if(material != null)
-						material.SetColor("_Color", c);
-				}
-			}
+	//				// Set the material(s) note: each context is sharing a single 
+	//				// material in this demo :)
+	//				if(material != null)
+	//					material.SetColor("_Color", c);
+	//			}
+	//		}
 				
-			break;
+	//		break;
 
-		}
-	}
+	//	}
+	////}
 
 	/// <summary>
 	/// Updates the model scale.
